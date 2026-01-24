@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Raycast
+.DS_Store
+*.log
+
+# Environment
+.env
+.env.local

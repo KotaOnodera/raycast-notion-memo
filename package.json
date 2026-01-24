@@ -1,0 +1,53 @@
+{
+  "name": "notion-daily-memo",
+  "title": "Notion Daily Memo",
+  "description": "Add timestamped memos to today's Notion page",
+  "icon": "icon.png",
+  "access": "public",
+  "categories": ["Productivity"],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "add-memo",
+      "title": "Add Memo to Today's Page",
+      "description": "Add a timestamped memo to today's Notion page",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "notionToken",
+      "title": "Notion Integration Token",
+      "description": "Your Notion Integration API Token",
+      "type": "password",
+      "required": true
+    },
+    {
+      "name": "databaseId",
+      "title": "Database ID",
+      "description": "The Notion Database ID containing your daily pages",
+      "type": "textfield",
+      "required": true
+    }
+  ],
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "@raycast/api": "^1.83.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "22.10.2",
+    "@types/react": "18.3.16",
+    "eslint": "^8.57.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "build": "ray build --skip-types -e dist -o dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
