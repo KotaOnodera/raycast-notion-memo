@@ -1,6 +1,7 @@
 {
   "name": "notion-daily-memo",
   "title": "Notion Daily Memo",
+  "author": "kotaonodera",
   "description": "Add timestamped memos to today's Notion page",
   "icon": "icon.png",
   "access": "public",
